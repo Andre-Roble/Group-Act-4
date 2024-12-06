@@ -22,4 +22,4 @@ jobs:
           python-version: '3.9'
 
       - name: Run Tests
-        run: grapphopper_parse-json_9.py
+        run: sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
