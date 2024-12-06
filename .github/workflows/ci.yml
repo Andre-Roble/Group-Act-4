@@ -61,7 +61,6 @@ jobs:
       # Step 4: Build executable with PyInstaller
       - name: Build Executable
         run: |
-          cd Group-Act-4/sys-integ-grp-act-4-main
           pyinstaller --onefile --windowed grapphopper_parse-json.py
 
       # Step 5: Upload Artifact (Executable)
@@ -69,6 +68,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: project_activity3_executable
-          path: dist/sys-integ-grp-act-4-main/grapphopper_parse-json.exe
+          path: dist/grapphopper_parse-json.exe
 
     
