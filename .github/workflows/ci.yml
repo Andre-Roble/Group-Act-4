@@ -27,10 +27,10 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r https://github.com/Andre-Roble/Group-Act-4/sys-integ-grp-act-4-main/requirements.txt
+          pip install -r Andre-Roble/Group-Act-4/sys-integ-grp-act-4-main/requirements.txt
 
       # Step 4: Run the Python script
       - name: Run Python Script
-        run: python https://github.com/Andre-Roble/Group-Act-4/sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
+        run: python Andre-Roble/Group-Act-4/sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
 
 
