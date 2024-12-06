@@ -68,6 +68,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: project_activity3_executable
-          path: ./grapphopper_parse-json_9.exe
+          path: grapphopper_parse-json_9.exe
 
     
