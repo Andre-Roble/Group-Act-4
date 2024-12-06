@@ -21,7 +21,5 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Run the Script
-        run: |
-          cd ./a-syst-integ/sys-integ-grp-act-4-main && \
-          python grapphopper_parse-json_9.py
+      - name: Run Tests
+        run: grapphopper_parse-json_9
