@@ -68,5 +68,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
                name: project_activity4_executable
-               path: a-syst-integ/sys-integ-grp-act-4-main/grapphopper_parse-json_9.exe
+               path: a-syst-integgrapphopper_parse-json_9.exe
     
