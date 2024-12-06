@@ -63,11 +63,12 @@ jobs:
         run: |
           pyinstaller --onefile --windowed graphhopper_parse-json_9.py
 
-      # Step 5: Upload Artifact (Executable)
+    # Step 5: Upload Artifact (Executable)
+      - name: Debug File Existence
+        run: ls -l ./build
+
       - name: Upload Executable
         uses: actions/upload-artifact@v3
         with:
           name: project-activity4-executable
-          path: ${{ env.EXECUTABLE_PATH }}
-
-    
+          path: ./build/grapphopper_parse-json_9.exe
