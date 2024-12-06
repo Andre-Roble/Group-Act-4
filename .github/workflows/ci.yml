@@ -21,10 +21,5 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r a-syst-integ/sys-integ-grp-act-4-main/requirement.txt
-
       - name: Run the Script
         run: python a-syst-integ/sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
