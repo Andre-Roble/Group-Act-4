@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r sys-integ-grp-act-4-main/requirements.txt
+          pip install -r a-syst-integ/sys-integ-grp-act-4-main/requirements.txt
 
       - name: Run the Script
-        run: python sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
+        run: python a-syst-integ/sys-integ-grp-act-4-main/grapphopper_parse-json_9.py
