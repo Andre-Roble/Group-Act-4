@@ -22,4 +22,4 @@ jobs:
           python-version: '3.9'
 
       - name: Run the Script
-        run: Group-Act-4 python sys-integ-grp-act-4-main/graphhopper_parse-json_9
+        run: Group-Act-4/sys-integ-grp-act-4-main/graphhopper_parse-json_9.py
