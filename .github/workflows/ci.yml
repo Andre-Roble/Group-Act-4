@@ -35,11 +35,17 @@ jobs:
           python -m tkinter || echo "Tkinter is not available in this environment"
           python -c "import requests"
 
+  #build-and-deploy:
+    #needs: test
+    #runs-on: ubuntu-latest
+    #if: success()  
+    #Only run deployment if tests pass
+
+  
   build-and-deploy:
     needs: test
-    runs-on: ubuntu-latest
-    if: success()  # Only run deployment if tests pass
-
+    runs-on: windows-latest  # Use Windows runner
+    if: success() 
     steps:
       # Step 1: Checkout repository
       - name: Checkout repository
@@ -64,13 +70,14 @@ jobs:
 
       # Step 5: Debug File Existence
       - name: Debug File Existence
-        run: ls -l ./dist
+        run: dir dist
 
       # Step 6: Upload Artifact (Executable)
       - name: Upload Executable
         uses: actions/upload-artifact@v3
         with:
           name: project_activity4_executable
-          path: ./dist/graphhopper_parse-json_9.pkg
+          path: ./dist/graphhopper_parse-json_9.exe
           if-no-files-found: warn
+
 
