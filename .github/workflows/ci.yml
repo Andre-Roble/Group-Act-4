@@ -72,12 +72,13 @@ jobs:
       - name: Debug File Existence
         run: dir dist
 
-      # Step 6: Upload Artifact (Executable)
+      # Step 5: Upload Artifact (Executable)
       - name: Upload Executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: project_activity4_executable
           path: ./dist/graphhopper_parse-json_9.exe
           if-no-files-found: warn
+
 
 
