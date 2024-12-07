@@ -29,8 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-
-      # Step 5: Run a basic test to check for execution errors
+      # Step 4: Run a basic test to check for execution errors
       - name: Run Basic Test
         run: |
           python -m tkinter || echo "Tkinter is not available in this environment"
@@ -63,10 +62,13 @@ jobs:
         run: |
           pyinstaller --onefile --windowed graphhopper_parse-json_9.py
 
-       # Step 5: Upload Artifact (Executable)
+      # Step 5: Debug File Existence
+      - name: Debug File Existence
+        run: ls -l ./dist
+
+      # Step 6: Upload Artifact (Executable)
       - name: Upload Executable
         uses: actions/upload-artifact@v3
         with:
-               name: project_activity4_executable
-               path: grapphopper_parse-json_9.exe
-    
+          name: project_activity4_executable
+          path: ./dist/graphhopper_parse-json_9.exe
