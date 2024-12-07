@@ -71,4 +71,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: project_activity4_executable
-          path: ./dist/graphhopper_parse-json_9.exe
+          path: ./dist/graphhopper_parse-json_9.pkg
+          if-no-files-found: warn
+
